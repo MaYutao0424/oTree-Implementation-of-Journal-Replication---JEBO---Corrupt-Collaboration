@@ -1,0 +1,67 @@
+{{ block title }}
+第二阶段：掷骰子决策
+{{ endblock }}
+{{ block content }}
+<style>
+    .otree-title {
+      text-align: center;
+      font-size: 2em;
+      font-weight:bold;
+    }
+    .otree-btn-next {
+      display: block;
+      margin: auto;
+      margin-top: 20px;
+      padding:auto;
+    }
+
+    table {
+    width: 60%;
+    border: 1px solid black;
+    text-align: center;
+    margin: auto;
+    margin-top: 20px;
+    }
+    th {
+    background-color: lightgray;
+    font-weight: bold;
+    }
+
+    div {
+        margin: auto;
+        text-align: center;
+    }
+
+</style>
+<div>
+    <p>一位小组成员已经掷出骰子并汇报了结果，你和其他另外一位小组成员在此能够看到他的结果：</p>
+    <p><strong>第一位小组成员汇报的结果是：{{first_mover.reported_dice}}</strong></p>
+    <p>接下来，您和另外一位小组成员需同时掷出骰子并汇报结果</p>
+    <p>计算机模拟生成骰子的点数为：<strong>{{player.original_dice}}</strong></p>
+</div>
+<div>
+    {{formfields}}
+</div>
+
+<table>
+    <tr>
+        <th>每位小组成员汇报结果同时为</th>
+        <th>每位小组成员的额外收入(个代币)</th>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>{{C.DICE_R1}}</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>{{C.DICE_R2}}</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>{{C.DICE_R3}}</td>
+    </tr>
+</table>
+
+<div>如果小组成员汇报结果不一致，则每位小组成员的额外收入均为0个代币</div>
+{{ next_button }}
+{{ endblock }}

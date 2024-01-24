@@ -1,0 +1,47 @@
+{{ block title }}
+第二阶段：实验说明
+{{ endblock }}
+
+{{ block content }}
+<style>
+    .otree-title {
+      text-align: center;
+      font-size: 2em;
+      font-weight:bold;
+    }
+    .otree-btn-next {
+      display: block;
+      margin: auto;
+      margin-top: 20px;
+      padding:auto;
+    }
+</style>
+
+<p> 
+    <span>第二阶段共计<strong>1</strong>轮。</span>
+    <span>您将同<strong>随机抽取的其他2位参与者</strong>组成三人小组并开展互动。组队过程不受第一阶段影响，同时您的真实身份不会透露给与您组队的其他参与者，您也永远不会知道其他参与者的身份。</span>
+    <span>在该阶段中，您和您的小组成员需要<strong>同时汇报</strong>计算机模拟生成的骰子点数。<strong>我们只会知晓您汇报的结果，而非您计算机上模拟生成的点数。 </strong></span>   
+</p>
+
+<h3>基础收入</h3>
+<p>小组中的每位成员都会收到{{C.ENDOWMENT}}个代币的基础收入</p>
+
+<h3>额外收入</h3>
+<div>
+    <p>小组中三位参与者汇报的掷骰子的<strong>联立结果</strong>决定了小组成员可以额外赚取的金额：</p>
+    <ul>
+        <li>如果三位成员均汇报1，每位成员将收到 {{C.DICE_R1}} 个代币</li>
+        <li>如果三位成员均汇报2，每位成员将收到 {{C.DICE_R2}} 个代币</li>
+        <li>如果三位成员均汇报3，每位成员将收到 {{C.DICE_R3}} 个代币</li>
+        <li>其他情况，每位成员的额外收入均为 0 个代币</li>
+    </ul>
+</div>
+<p>
+    <span>因此，您在实验第二阶段所获得的总收入为：<strong>基础收入 + 额外收入(依据小组成员汇报的掷骰子的联立结果)</strong>。</span><br>
+    <span>在第二部分结束时，每位小组成员将<strong>知晓本小组所有成员汇报的掷骰子结果(而非计算机模拟生成的结果)以及额外收入情况。</strong></span><br>
+    <span>在实验所有阶段结束后，我们将告知您一个随机抽取并作为支付依据的实验阶段，并向您支付实验报酬。</span>
+</p>
+    {{ next_button }}
+{{ endblock }}
+
+

@@ -1,0 +1,36 @@
+{{ block title }}
+第三阶段第{{player.round_number}}轮：实验结果公布
+{{ endblock }}
+
+{{ block content }}
+<style>
+    .otree-title {
+      text-align: center;
+      font-size: 2em;
+      font-weight:bold;
+    }
+    .otree-btn-next {
+      display: block;
+      margin: auto;
+      margin-top: 20px;
+      padding:auto;
+    }
+    div {
+        margin: auto;
+        text-align: center;
+    }
+</style>
+<div>
+    <p>小组成员1汇报的点数为: {{p1.reported_dice}}</p>
+    <p>小组成员2汇报的点数为: {{p2.reported_dice}}</p>
+    <p>小组成员3汇报的点数为: {{p3.reported_dice}}</p>
+</div>
+
+<div>
+    <p>小组中每位成员将得到{{group.group_profit}}个代币的额外收入</p>
+    <p>因此，您在实验第三阶段所获得的总收入为：{{player.payoff}}</p>
+</div>
+    {{ next_button }}
+{{ endblock }}
+
+

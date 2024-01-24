@@ -1,0 +1,42 @@
+{{ block title }}
+第一阶段：实验说明
+{{ endblock }}
+
+{{ block content }}
+<style>
+    .otree-title {
+      text-align: center;
+      font-size: 2em;
+      font-weight:bold;
+    }
+    .otree-btn-next {
+      display: block;
+      margin: auto;
+      margin-top: 20px;
+      padding:auto;
+    }
+</style>
+
+<p>第一阶段共计<strong>1</strong>轮。在该阶段中，您需要汇报计算机模拟生成的骰子点数。<strong>我们只会知晓您汇报的结果，而非您计算机上模拟生成的点数。</strong> 同时，您不会与其他参与者互动。</p>
+
+<h3>基础收入</h3>
+<p>您会收到{{C.ENDOWMENT}}个代币的基础收入</p>
+
+<h3>额外收入</h3>
+<div>
+    <p>您所汇报的掷骰子结果决定了您可以额外赚取的金额：</p>
+    <ul>
+        <li>如果您汇报1，您将收到 {{C.DICE_R1}} 个代币</li>
+        <li>如果您汇报2，您将收到 {{C.DICE_R2}} 个代币</li>
+        <li>如果您汇报3，您将收到 {{C.DICE_R3}} 个代币</li>
+    </ul>
+</div>
+<p>
+    <span>在某一时刻，实验系统会要求您估计某些值。<strong>若您估计正确，您可赚取额外的金额，</strong>稍后您将在屏幕上收到有关此内容的更多信息。</span><br>
+    <span>因此，您在实验第一阶段所获得的总收入为：<strong>基础收入 + 额外收入1(依据汇报的掷骰子结果) + 额外收入2(依据估算问题的正确率)</strong>。</span><br>
+    <span>在实验所有阶段结束后，我们将告知您一个随机抽取并作为支付依据的实验阶段，并向您支付实验报酬。</span>
+</p>
+    {{ next_button }}
+{{ endblock }}
+
+

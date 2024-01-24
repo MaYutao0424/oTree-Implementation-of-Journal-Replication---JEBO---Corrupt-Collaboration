@@ -1,0 +1,47 @@
+{{ block title }}
+第二阶段：实验说明
+{{ endblock }}
+
+{{ block content }}
+<style>
+    .otree-title {
+      text-align: center;
+      font-size: 2em;
+      font-weight:bold;
+    }
+    .otree-btn-next {
+      display: block;
+      margin: auto;
+      margin-top: 20px;
+      padding:auto;
+    }
+    div {
+        margin: auto;
+        text-align: center;
+        margin-top: 20px;
+        
+    }
+    p {
+        padding:5px;
+    }
+</style>
+
+<div>
+    <p>接下来，您和您的小组成员需要掷出骰子并汇报结果，汇报的顺序由计算机随机决定</p> 
+    <p>您和您的其他两位小组成员掷出骰子并汇报结果的顺序如下：</p>
+</div>
+
+<div style="border: 2px solid black;">
+    <p><strong>您将第一个掷出骰子并汇报结果。</strong></p>
+    <p>之后，您的结果将显示在其他两名小组成员的屏幕上。</p>
+    <p>接着，这两名小组成员将同时掷出骰子并汇报结果。</p>
+</div>
+
+<div>
+    <p>在第二部分结束时，每位小组成员将<strong>知晓本小组所有成员汇报的掷骰子结果(而非计算机模拟生成的结果)以及额外收入情况。</p>
+</div>
+
+    {{ next_button }}
+{{ endblock }}
+
+

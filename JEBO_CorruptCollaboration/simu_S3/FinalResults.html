@@ -1,0 +1,80 @@
+{{ block title }}
+最终实验结果公布
+{{ endblock }}
+{{ block content }}
+<style>
+    .otree-title {
+        text-align: center;
+        font-size: 2em;
+        font-weight:bold;
+    }
+    .otree-btn-next {
+        display: block;
+        margin: auto;
+        margin-top: 20px;
+        padding:auto;
+    }
+
+    table {
+        width: 60%;
+        border: 1px solid black;
+        text-align: center;
+        margin: auto;
+        margin-top: 20px;
+    }
+    th {
+        background-color: lightgray;
+        font-weight: bold;
+    }
+
+    div {
+        margin: auto;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+</style>
+
+<div>
+    <p>现在揭示第一阶段中您的竞猜结果：</p>
+    <table>
+        <tr>
+            <th>汇报的点数</th>
+            <th>汇报该点数的玩家数量(除您以外)</th>
+            <th>您猜测的玩家数量(除您以外)</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>{{r1}}</td>
+            <td>{{g1}}</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>{{r2}}</td>
+            <td>{{g2}}</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>{{r3}}</td>
+            <td>{{g3}}</td>
+        </tr>
+    </table>
+</div>
+
+<div>
+    <p>您猜测结果的标准差为：<strong>{{guess_sd}}</strong>
+        <span>
+            {{if guess}}
+                ，恭喜您的猜测结果在误差范围内，您在第一阶段的收入增加了
+            {{else}}
+                ，很遗憾，您的猜测结果并没有在误差范围内
+            {{endif}}
+        </span>
+    </p>
+</div>
+
+<div>
+    <p><strong>第{{player.final_chosen_stage}}阶段</strong>被抽中作为您的收益结算依据</p>
+    <p>您在本次实验中的最终收益为{{participant.payoff}}，感谢您的参与！</p>
+</div>
+{{ endblock }}

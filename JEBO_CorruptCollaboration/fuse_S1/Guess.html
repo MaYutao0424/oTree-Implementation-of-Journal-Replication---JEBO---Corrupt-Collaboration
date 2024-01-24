@@ -1,0 +1,36 @@
+{{ block title }}
+第一阶段：猜测其他玩家行为
+{{ endblock }}
+
+{{ block content }}
+<style>
+    .otree-title {
+      text-align: center;
+      font-size: 2em;
+      font-weight:bold;
+    }
+    .otree-btn-next {
+      display: block;
+      margin: auto;
+      margin-top: 20px;
+      padding:auto;
+    }
+    div {
+        margin: auto;
+        text-align: center;
+    }
+</style>
+<div>
+    <p>在该部分中，您需要猜测汇报<strong>1点、2点和3点</strong>的其他玩家分别有多少。</p>
+    <p>若您猜测的结果与其他人实际汇报结果的<strong>标准差小于1</strong>，您将会额外获得<strong>{{C.GUESS_R}}</strong>个代币，在实验所有阶段完成后揭晓结果。</p>
+    <p>场上除您以外，还有<strong>{{others_len}}</strong>位玩家，您所猜测每一点数下的玩家数量之和应该等于场上其他玩家的数量</p>
+</div>
+
+<div>
+  <p>您猜测汇报<strong>1点数</strong>的玩家(除您以外)数量为：<input type="number" name="guess_1"></p>
+  <p>您猜测汇报<strong>2点数</strong>的玩家(除您以外)数量为：<input type="number" name="guess_2"></p>
+  <p>您猜测汇报<strong>3点数</strong>的玩家(除您以外)数量为：<input type="number" name="guess_3"></p>
+</div>
+
+{{ next_button }}
+{{ endblock }}

@@ -1,0 +1,60 @@
+{{ block title }}
+第一阶段：掷骰子决策
+{{ endblock }}
+{{ block content }}
+<style>
+    .otree-title {
+      text-align: center;
+      font-size: 2em;
+      font-weight:bold;
+    }
+    .otree-btn-next {
+      display: block;
+      margin: auto;
+      margin-top: 20px;
+      padding:auto;
+    }
+
+    table {
+    width: 60%;
+    border: 1px solid black;
+    text-align: center;
+    margin: auto;
+    margin-top: 20px;
+    }
+    th {
+    background-color: lightgray;
+    font-weight: bold;
+    }
+
+    div {
+        margin: auto;
+        text-align: center;
+    }
+
+</style>
+<div>计算机模拟生成骰子的点数为：<strong>{{player.original_dice}}</strong></div>
+<div>
+    {{formfields}}
+</div>
+
+<table>
+    <tr>
+        <th>您的汇报结果</th>
+        <th>您的额外收入(个代币)</th>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>{{C.DICE_R1}}</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>{{C.DICE_R2}}</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>{{C.DICE_R3}}</td>
+    </tr>
+</table>
+{{ next_button }}
+{{ endblock }}
